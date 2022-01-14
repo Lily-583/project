@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+
+    <title>Home Page</title>
+    <!-- <link rel="stylesheet" href="nav.css"> -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <link rel="stylesheet" href="nav.css">
+    <style>
+
+      
+      a{
+      color:black;
+      text-decoration: none;
+     }
+    
+     
+     #TopRating{
+        position: relative;
+     }
+     #button{
+       margin-left: 50%;
+      /* margin-right: auto;*/
+       position: absolute;
+       bottom: 40%;
+      /* background-color: blue;*/
+     }
+
+     
+     .card{
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2%;
+       
+     }
+     .container{
+        flex-direction: row;
+        align-content: center;
+     }
+
+     #HomeRecipe{
+       text-align:center;
+     }
+
+     #HomeRecipe .container{
+        width:60%;
+        margin-left: 20%;
+        margin-right: 20%;
+     }
+
+     #HomeRecipe h2{
+       margin-top: 3%;
+       font-family: "Sofia", sans-serif;
+       color:#C5B358;
+     }
+
+     #HomeRecipe .row{
+        margin-top: 3%;
+     }
+
+     #HomeRecipe .btn{
+       margin-top: 3%;
+     }
+
+     /*world*/
+     .world{
+        background-color:  #e6ffe6;
+        position:relative;
+        height:40vh;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2%;
+
+     }
+     .section1{
+        /*background-color: green;*/
+        height: 80%;
+        width: 50%;
+        margin-left:30%;
+        box-sizing: border-box;
+     }
+     .section2{
+        /*background-color: rgba(255,255,255,0.8);*/
+        background-color: white;
+        position: absolute;
+        bottom: 10%;
+        width: 30%;
+       /* margin-right: 0;*/
+       left:20%;
+       line-height:80%;
+
+       /* padding-left:25%;*/
+
+        text-align: center;
+        padding-top: 1%;
+        
+     }
+     .section1 img{
+        width:100%;
+        box-sizing: border-box;
+        height: 100%;
+     }
+
+    /* .carousel{
+      width:50%;
+      
+     }*/
+     .carousel-control-prev{
+      color:black;
+      /*background-color: grey;*/
+     }
+
+     .world-title{
+      
+      text-align: center;
+      margin-top: 3%;
+      font-family: "Sofia", sans-serif;
+      color:#C5B358;
+     }
+     #thetitle{
+      padding:1%;
+      text-align: center;
+      font-family: "Sofia", sans-serif;
+      color:#C5B358;
+     }
+     #thetitle a{
+      color:#C5B358;
+     }
+     .section2{
+        font-family: "Sofia", sans-serif;
+        color:#C5B358;
+     }
+     #HomeRecipe a{
+      color:#C5B358;
+     }
+
+     #the-world a{
+        color:#C5B358;
+     }
+
+     @media(min-width: 768px)
+     {
+        #button{
+          position: absolute;
+          bottom: 60%;
+        }
+     }
+
+     @media(min-width:992px)
+     {
+        #button{
+          position: absolute;
+          bottom: 50%;
+        }
+     }
+     
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-custom navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="homepage.html">Dessert</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="homepage.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="restaurant.html">Restaurant</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="recipe.html">Recipe</a>
+        </li>
+
+        <!-- <li class="nav-item">
+          <a class="nav-link" href="#">World</a>
+        </li> -->
+        
+      </ul>
+      <!-- <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form> -->
+    </div>
+  </div>
+</nav>
+<div id="thetitle">
+  <a href="restaurant.html"><h2>Top Rating Restaurants</h2></a>
+</div>
+<div id="TopRating">
+    
+<!-- Carousol -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="cut1.png" class="d-block w-100" alt="img3">
+        </div>
+        <div class="carousel-item">
+          <img src="cut2.png" class="d-block w-100" alt="img6">
+        </div>
+        <div class="carousel-item">
+          <img src="mac7.png" class="d-block w-100" alt="img8">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+    </div>
+
+    
+   <!--  <img src="1.jpg" alt="cake"> -->
+   
+    <!-- <img src="cake5.jpg" alt="restaurant"> -->
+    <div id=button>
+        <button type="button" class="btn btn-outline-secondary" onclick="window.location.href = 'restaurant.html';">View All</button>
+    </div>
+</div>
+
+
+<div id="HomeRecipe">
+    <a href="recipe.html"><h2> Home Recipe</h2></a>
+
+    <div class="container">
+      <div class="row">
+          <!-- col1 -->
+          <div class="col-sm-12 col-md-6 col-lg-3">
+            <!-- Column -->
+            <a href="recipe.html">
+              <div class="card">
+                  <img src="kid.jpg" class="card-img-top" alt="recipe-img">
+                  <div class="card-body">
+                    <p><strong>Sundae</strong></p>
+                    <p class="card-text">Kid's Dream.</p>
+                  </div>
+              </div>
+            </a>
+          <!-- end of card div -->
+          </div>
+
+          <!-- col2 -->
+          <div class="col-sm-12 col-md-6 col-lg-3">
+            <!-- Column -->
+             <a href="recipe.html">
+              <div class="card">
+                  <img src="yogart.jpg" class="card-img-top" alt="recipe-img">
+                  <div class="card-body">
+                   <p><strong>Yogart</strong></p>
+                    <p class="card-text">Low Calorie.</p>
+                  </div>
+              </div>
+            </a>
+          <!-- end of card div -->
+          </div>
+
+          <!-- col3 -->
+          
+            <!-- Column -->
+            <div class="col-sm-12 col-md-6 col-lg-3">
+            <!-- Column -->
+              <a href="recipe.html">
+                <div class="card">
+                    <img src="pie.jpg" class="card-img-top" alt="recipe-img">
+                    <div class="card-body">
+                      <p><strong>Blue Berry</strong></p>
+                      <p class="card-text">Very nutrious.</p>
+                    </div>
+                </div>
+              </a>
+          <!-- end of card div -->
+          </div>
+
+          <!-- col4 -->
+          
+            <!-- Column -->
+            <div class="col-sm-12 col-md-6 col-lg-3">
+            <!-- Column -->
+              <a href="recipe.html">
+                <div class="card">
+                    <img src="black.jpg" class="card-img-top" alt="recipe-img">
+                    <div class="card-body">
+                      <p><strong>Black Forest</strong></p>
+                      <p class="card-text">Chocolate.</p>
+                    </div>
+                </div>
+              </a>
+          <!-- end of card div -->
+          </div>
+       </div>
+
+
+       <!-- the second row -->
+       <div class="row">
+          <!-- col1 -->
+          <div class="col-sm-12 col-md-6 col-lg-3">
+            <!-- Column -->
+             <a href="recipe.html">
+                <div class="card">
+                    <img src="f4.jpeg" class="card-img-top" alt="recipe-img">
+                    <div class="card-body">
+                      <p><strong>Lemon Cake</strong></p>
+                      <p class="card-text">Sweet and Sour.</p>
+                    </div>
+                </div>
+            </a>
+          <!-- end of card div -->
+          </div>
+
+          <!-- col2 -->
+          <div class="col-sm-12 col-md-6 col-lg-3">
+            <!-- Column -->
+             <a href="recipe.html">
+                <div class="card">
+                    <img src="tira.jpg" class="card-img-top" alt="recipe-img">
+                    <div class="card-body">
+                      <p><strong>Tiramisu</strong></p>
+                      <p class="card-text">Always Classics.</p>
+                    </div>
+                </div>
+             </a>
+          <!-- end of card div -->
+          </div>
+
+          <!-- col3 -->
+          
+            <!-- Column -->
+            <div class="col-sm-12 col-md-6 col-lg-3">
+            <!-- Column -->
+              <a href="recipe.html">
+                <div class="card">
+                    <img src="donut.jpg" class="card-img-top" alt="recipe-img">
+                    <div class="card-body">
+                      <p><strong>Donut</strong></p>
+                      <p class="card-text">Breakfast Choice.</p>
+                    </div>
+                </div>
+              </a>
+          <!-- end of card div -->
+          </div>
+
+          <!-- col4 -->
+          
+            <!-- Column -->
+            <div class="col-sm-12 col-md-6 col-lg-3">
+            <!-- Column -->
+              <a href="recipe.html">
+                <div class="card">
+                    <img src="cup.jpg" class="card-img-top" alt="recipe-img">
+                    <div class="card-body">
+                      <p><strong>Cup Cake</strong></p>
+                      <p class="card-text">Cute and Lovely.</p>
+                    </div>
+                </div>
+              </a>
+          <!-- end of card div -->
+          </div>
+       </div>
+
+
+<!-- end of recipe div -->
+  </div>
+  <button type="button" class="btn btn-outline-warning btn-sm" onclick="window.location.href ='recipe.html';">View More</button>
+
+
+</div>
+
+
+
+<div id="the-world">
+  <h2 class="world-title"> Desserts Around the World</h2>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="world col-sm-12 col-md-12 col-lg-6">
+            <div class="section1">
+                <!-- <p>joasjoitjojaojs{Ojta[]}</p> -->
+                <img src="chinese.jpeg" alt="mooncake" id="asia">
+            </div>
+            <div class="section2">
+                <h5>Asia</h5>
+                <p>Mooncake</p>
+            </div>
+        </div>
+
+        <div class="world col-sm-12 col-md-12 col-lg-6">
+            <div class="section1">
+                <!-- <p>joasjoitjojaojs{Ojta[]}</p> -->
+                <img src="aus.jpeg" alt="caramel">
+            </div>
+            <div class="section2">
+                <h5>Oceania</h5>
+                <p>Pavlova</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="world col-sm-12 col-md-12 col-lg-6">
+            <div class="section1">
+                <!-- <p>joasjoitjojaojs{Ojta[]}</p> -->
+                <img src="nap.jpeg" alt="napolen">
+            </div>
+            <div class="section2">
+                <h5>Europe</h5>
+                <p>Napoleon</p>
+            </div>
+        </div>
+
+        <div class="world col-sm-12 col-md-12 col-lg-6">
+            <div class="section1">
+                <!-- <p>joasjoitjojaojs{Ojta[]}</p> -->
+                <img src="antar.jpeg" alt="chocolate">
+            </div>
+            <div class="section2">
+                <h5>Antarctica</h5>
+                <p>Chocolate</p>
+            </div>
+        </div>
+    </div>
+
+     <div class="row">
+        <div class="world col-sm-12 col-md-12 col-lg-6">
+            <div class="section1">
+                <!-- <p>joasjoitjojaojs{Ojta[]}</p> -->
+                <img src="smore.jpeg" alt="S'more">
+            </div>
+            <div class="section2">
+                <h5>North America</h5>
+                <p>S'more</p>
+            </div>
+        </div>
+
+        <div class="world col-sm-12 col-md-12 col-lg-6">
+            <div class="section1">
+                <!-- <p>joasjoitjojaojs{Ojta[]}</p> -->
+                <img src="south.jpeg" alt="Postre chajá">
+            </div>
+            <div class="section2">
+                <h5>South America</h5>
+                <p>Postre chajá</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+        
+
+<!-- Slide show -->
+<!-- <div class="slider">
+      <span id="slide-1"></span>
+      <span id="slide-2"></span>
+      <span id="slide-3"></span>
+      <div class="image-container">
+        <img src="3.jpeg" class="slide" width="500" height="300" />
+        <img src="3.jpeg" class="slide" width="500" height="300" />
+        <img src="3.jpeg" class="slide" width="500" height="300" />
+      </div>
+      <div class="buttons">
+        <a href="#slide-1"></a>
+        <a href="#slide-2"></a>
+        <a href="#slide-3"></a>
+      </div>
+    </div>
+ -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+
+<script>
+  document.querySelector("#asia").onmouseenter=function()
+  {
+    this.src="mooncake2.jpg";
+  }
+
+   document.querySelector("#asia").onmouseleave=function()
+  {
+    this.src="chinese.jpeg";
+  }
+</script>
+
+<!-- <script src="projectmain.js"></script> -->
+</body>
+</html>
