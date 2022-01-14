@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="ISO-8859-1">
+  <title>List Users</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+  <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+  <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<style type="text/css">
+  html, body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+
+  }
+
+  #total{
+		position:relative;
+	}
+
+  .h2{
+    position:absolute;
+    text-align: center;
+  }
+
+  .pick{
+		position:absolute;
+		top:5%;
+		left:20%;
+		right:20%;
+		width:60%;
+		padding-left: 5%;
+		padding-right: 5%;
+		padding-top: 1%;
+		padding-bottom: 3%;
+		margin-top: 10%;
+
+	}
+
+    .card{
+        background-color: #E3E3E3;
+        width: 20rem;
+    }
+
+    .card:hover{
+        background-color: white;
+        transform: scale(1.1);
+    }
+
+    .link{
+        text-decoration:none;
+        color: purple;
+    }
+
+    .link:hover{
+        text-decoration:none;
+        color: #7C469A;
+    }
+  
+</style>
+
+  <body>
+  <div id="total">
+     <div class="container pick">
+<!--         <h2 style="color:white">Pick a role</h2>-->
+         <div style="display: flex">
+         <div class="card">
+             <img class="card-img-top" th:src="@{/images/leader_head.png}" alt="Card image cap">
+             <div class="card-body">
+                 <h4><a th:href="@{/register_manager}" class="link"> Be a Leader</a></h4>
+             </div>
+         </div>
+<!--      <div>-->
+<!--        <h3><a th:href="@{/register_manager}" style="color:purple"> register as leader</a></h3>-->
+<!--      </div>-->
+         <div class="card" style="margin-left: 60px">
+             <img class="card-img-top" th:src="@{/images/member_head.png}" alt="Card image cap">
+             <div class="card-body">
+                 <h4><a th:href="@{/register_user}" class="link"> Be a Member</a></h4>
+             </div>
+         </div>
+<!--      <div>-->
+<!--        <h3><a th:href="@{/register_user}" style="color:purple"> register as member</a></h3>-->
+<!--      </div>-->
+         </div>
+</div>
+  </div>
+</body>
+</html>

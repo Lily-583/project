@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Sign Up - Workaholic</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+	<script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+	<script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&display=swap" rel="stylesheet">
+</head>
+<style>
+.login h2{
+		text-align: center;
+		margin-left: 13%;
+		margin-right: auto;
+		padding-left: auto;
+	}
+.login h3{
+	text-align: center;
+	margin-left: 13%;
+	margin-right: auto;
+	padding-left: auto;
+}
+.login h4{
+    text-align: center;
+	margin-top: 3%;
+	font-family: 'Merriweather', serif;
+	font-size: 40px;
+	font-weight: bold;
+}
+.login{
+		position:absolute;
+		top:20%;
+		left:15%;
+		right:15%;
+		width:60%;
+		padding-left: 1%;
+		padding-right: 5%;
+		padding-top: 5%;
+		padding-bottom: 3%;
+		/*height:100%;*/
+		margin-top: 5%;
+		border-radius: 15px 15px 15px 15px;
+		background: url([[@{/images/login-bg.png}]]);
+		background-size: cover;
+	}
+.form-group {
+		padding-top: 3%;
+	}
+.background img{
+        filter: blur(8px);
+		min-height:100%;
+		min-width: 1024px;
+
+		width:100%;
+		height:auto;
+
+		position:fixed;
+		top:0;
+		left:0;
+	}
+	#total{
+		position:relative;
+	}
+.btn-primary {
+    color: white;
+    background-color: purple;
+    border-color: purple;
+	}
+
+	.btn-primary:hover {
+    color: white;
+    background-color:indigo;
+    border-color: indigo;
+	}
+
+	.myImg{
+		text-align:center;
+		margin-left: 13%;
+		margin-right: auto;
+		padding-left: auto;
+	}
+	.signup-box{
+	    margin-top:5%;
+	    width:50%;
+	    margin-left: 50%;
+	}
+</style>
+<body>
+<div id="total">
+	<div class="background">
+		<img th:src="@{/images/index-bg-2.jpg}" class="img-fluid" alt="login-img">
+	</div>
+	<div class="container login">
+		<!--        <div class="myImg">-->
+		<!--            <img th:src="@{/images/logo.png}" alt="Logo" width=250 height=125/>-->
+		<!--        </div>-->
+		<!--            <img th:src="@{/images/login-bg.png}" alt="signup-side" class="side-img"/>-->
+		<div class="signup-box">
+			<h4>Sign up</h4>
+			<form th:action="@{/process_user_register}" th:object="${user}"
+				  method="post">
+				<div class="form-group row">
+					<label class="col-4 col-form-label">E-mail: </label>
+					<div class="col-8">
+						<input type="email" th:field="*{email}" placeholder="Workaholic@example.com" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="form-control" required />
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label class="col-4 col-form-label">Password: </label>
+					<div class="col-8">
+						<input type="password" th:field="*{password}" class="form-control"
+							   pattern=".{8,26}" required/>
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label class="col-4 col-form-label">First Name: </label>
+					<div class="col-8">
+						<input type="text" th:field="*{firstName}" class="form-control"
+							   required minlength="2" maxlength="20"/>
+					</div>
+				</div>
+
+				<div class="form-group row">
+					<label class="col-4 col-form-label">Last Name: </label>
+					<div class="col-8">
+						<input type="text" th:field="*{lastName}" class="form-control"
+							   required minlength="2" maxlength="20" />
+					</div>
+				</div>
+
+				<div>
+					<button type="submit" class="btn btn-primary">Sign Up</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+</html>

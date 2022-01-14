@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>List Tasks</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+	<script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+	<!-- <script type="text/javascript" src="/webjars/bootstrap/js/bootstrap.min.js"></script> -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@1,700&display=swap" rel="stylesheet">
+</head>
+
+<style>
+	body{
+		position: relative;
+	}
+	.intro{
+		position:absolute;
+		top:15%;
+		color:white;
+		font-size: 300%;
+		font-family: 'Merriweather', serif;
+		margin-left: 10%;
+	}
+
+	.text{
+		top:30%;
+		position:absolute;
+		width:60%;
+		margin-left: 10%;
+		font-size: 150%;
+		font-family: 'Merriweather', serif;
+		color:#FDFEFE;
+		line-height: 180%;
+	}
+
+	.btn{
+		top: 50%;
+		left:10%;
+		position:absolute;
+		background-color: indigo;
+	}
+
+	.btn:hover{
+		background-color: indigo;
+	}
+
+	/*.carousel{
+		position:absolute;
+		top:20%;
+		right:10%;
+		width:25%;
+	}*/
+	.link{
+		text-decoration:none;
+		color: white;
+	}
+
+</style>
+<body>
+	
+		<img th:src="@{/images/guest5.jpg}" alt="bg"  class="img-fluid">
+		
+		<div class="intro">
+			<p>About Workaholic</p>
+		</div>
+
+		<div class="text">
+			<p>A workspace whereby individuals work together for a common purpose to achieve goals.</p>
+			
+		</div>
+
+
+		<button type="button" class="btn btn-secondary "><a th:href="@{/main}" class="link">Go back</a></button>
+
+		<!-- <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+		  <div class="carousel-indicators">
+		    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+		    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+		    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+		  </div>
+		  <div class="carousel-inner">
+		    <div class="carousel-item active">
+		      <img src="login.jpg" class="d-block w-100" alt="...">
+		    </div>
+		    <div class="carousel-item">
+		      <img src="..." class="d-block w-100" alt="...">
+		    </div>
+		    <div class="carousel-item">
+		      <img src="..." class="d-block w-100" alt="...">
+		    </div>
+		  </div>
+		  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+		    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		    <span class="visually-hidden">Previous</span>
+		  </button>
+		  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+		    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+		    <span class="visually-hidden">Next</span>
+		  </button>
+		</div> -->
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</html>
